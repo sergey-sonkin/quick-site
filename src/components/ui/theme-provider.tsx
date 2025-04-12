@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
+import { getThemeInitScript } from "@/lib/theme-script";
 
 type Theme = "light" | "dark" | "system";
 
@@ -28,25 +29,7 @@ export function ThemeProvider({
   useEffect(() => {
     // Add script to avoid flash of unstyled content
     const script = document.createElement("script");
-    script.innerHTML = `
-      (function() {
-        try {
-          const savedTheme = localStorage.getItem("theme");
-          const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          
-          let theme = "light";
-          if (savedTheme === "dark" || (savedTheme === "system" && systemPrefersDark) || (!savedTheme && systemPrefersDark)) {
-            theme = "dark";
-            document.documentElement.classList.add("dark");
-          } else {
-            document.documentElement.classList.remove("dark");
-          }
-          document.documentElement.style.visibility = "visible";
-        } catch (e) {
-          console.error("Theme initialization failed:", e);
-        }
-      })();
-    `;
+    script.innerHTML = getThemeInitScript();
     document.head.prepend(script);
 
     const savedTheme = localStorage.getItem("theme") as Theme | null;
@@ -57,10 +40,19 @@ export function ThemeProvider({
 
   useEffect(() => {
     const applyTheme = () => {
-      if (theme === "system") {
-        const systemPrefersDark = window.matchMedia(
+      let systemPrefersDark = false;
+
+      // Try to detect system preference, default to dark if not available
+      try {
+        systemPrefersDark = window.matchMedia(
           "(prefers-color-scheme: dark)"
         ).matches;
+      } catch {  // Removed unused 'e' variable
+        // If system preference detection fails, default to dark
+        systemPrefersDark = true;
+      }
+
+      if (theme === "system") {
         document.documentElement.classList.toggle("dark", systemPrefersDark);
       } else {
         document.documentElement.classList.toggle("dark", theme === "dark");
@@ -73,15 +65,20 @@ export function ThemeProvider({
     localStorage.setItem("theme", theme);
 
     // Listen for system preference changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = () => {
-      if (theme === "system") {
-        applyTheme();
-      }
-    };
+    try {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const handleChange = () => {
+        if (theme === "system") {
+          applyTheme();
+        }
+      };
 
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
+      mediaQuery.addEventListener("change", handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange);
+    } catch {  // Removed unused 'e' variable
+      // If media query isn't supported, we won't set up the listener
+      console.warn("Media query for dark mode not supported");
+    }
   }, [theme]);
 
   const value = {

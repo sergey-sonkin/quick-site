@@ -46,7 +46,7 @@ export default function RootLayout({
           <header className="bg-background border-b border-neutral-200 dark:border-neutral-800">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
               <Link href="/" className="text-xl font-bold">
-                sonkin.net
+                about.sonkin.net
               </Link>
               <div className="flex items-center gap-2">
                 <nav className="flex items-center gap-1 md:gap-2">
