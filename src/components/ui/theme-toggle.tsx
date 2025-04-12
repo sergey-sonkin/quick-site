@@ -4,49 +4,22 @@ import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/ui/theme-provider";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = React.useState<"light" | "dark">("light");
-
-  React.useEffect(() => {
-    // Check if user prefers dark mode
-    const isDarkMode = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    setTheme(isDarkMode ? "dark" : "light");
-
-    // Add dark class to document if needed
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
-
-  function toggleTheme() {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === "light" ? "dark" : "light";
-
-      // Toggle dark class on document
-      if (newTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-
-      return newTheme;
-    });
-  }
+  const { theme, setTheme } = useTheme();
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       title={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
     >
-      {theme === "light" ? (
-        <Moon className="h-5 w-5" />
-      ) : (
+      {theme === "dark" ? (
         <Sun className="h-5 w-5" />
+      ) : (
+        <Moon className="h-5 w-5" />
       )}
       {/* <span className="sr-only">
         {theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
