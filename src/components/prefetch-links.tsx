@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export function PrefetchLinks() {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     // Prefetch all main navigation pages when component mounts
-    router.prefetch('/')
-    router.prefetch('/resume')
-    router.prefetch('/blog')
-  }, [router])
+    router.prefetch("/");
+    router.prefetch("/resume");
+    router.prefetch("/blog");
+  }, [router]);
 
-  return null
+  return null;
 }

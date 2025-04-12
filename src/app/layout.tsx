@@ -43,17 +43,26 @@ export default function RootLayout({
               <nav className="flex items-center gap-1 md:gap-2">
                 <Button variant="ghost" asChild>
                   <Link href="/" prefetch={true}>
-                    Home <span className="ml-1 text-xs opacity-60 hidden sm:inline">[h]</span>
+                    Home{" "}
+                    <span className="ml-1 text-xs opacity-60 hidden sm:inline">
+                      [h]
+                    </span>
                   </Link>
                 </Button>
                 <Button variant="ghost" asChild>
                   <Link href="/resume" prefetch={true}>
-                    Resume <span className="ml-1 text-xs opacity-60 hidden sm:inline">[r]</span>
+                    Resume{" "}
+                    <span className="ml-1 text-xs opacity-60 hidden sm:inline">
+                      [r]
+                    </span>
                   </Link>
                 </Button>
                 <Button variant="ghost" asChild>
                   <Link href="/blog" prefetch={true}>
-                    Blog <span className="ml-1 text-xs opacity-60 hidden sm:inline">[b]</span>
+                    Blog{" "}
+                    <span className="ml-1 text-xs opacity-60 hidden sm:inline">
+                      [b]
+                    </span>
                   </Link>
                 </Button>
               </nav>

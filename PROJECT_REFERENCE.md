@@ -7,6 +7,7 @@ This document serves as a reference guide for the personal website project, outl
 ### Purpose
 
 A modern personal website that includes:
+
 - Professional landing page with photo
 - Resume/CV section
 - Blog section
@@ -17,13 +18,16 @@ A modern personal website that includes:
 ### Core Technologies
 
 - **Next.js**: For server-rendered React applications
+
   - Using App Router architecture
   - Version: 15.x
 
 - **TypeScript**: For type safety and improved development experience
+
   - Version: 5.x
 
 - **TailwindCSS**: For utility-first styling
+
   - Version: 3.x (Note: v4 compatibility issues were encountered)
 
 - **shadcn UI**: For reusable UI components
@@ -62,11 +66,13 @@ website2/
 ## Key Features
 
 1. **Landing Page**
+
    - Photo/avatar section
    - Brief introduction
    - Navigation to other sections
 
 2. **Resume Page**
+
    - Professional summary
    - Work experience
    - Education
@@ -119,15 +125,18 @@ pnpm build
 ## Future Enhancements
 
 1. **Content Management**
+
    - Consider headless CMS integration for blog posts
    - Options: Contentful, Sanity, or MDX files
 
 2. **Interactive Elements**
+
    - Contact form with validation
    - Project showcase with filtering
    - Dark/light mode toggle
 
 3. **SEO Improvements**
+
    - Metadata optimization
    - Open Graph tags
    - Structured data
