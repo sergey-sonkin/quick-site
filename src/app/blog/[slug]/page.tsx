@@ -36,7 +36,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 Next.js offers a great developer experience with features like
                 server-side rendering, static site generation, API routes, and
-                more. It's a production-ready framework that makes building
+                more. It&apos;s a production-ready framework that makes building
                 React applications a breeze.
               </p>
               <h2 className="text-xl font-semibold mt-8 mb-3">

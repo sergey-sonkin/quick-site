@@ -3,27 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Nord color palette CSS variables */
+  /* Polar Night (dark greys/blacks) */
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
 
-  --primary: 221.2 83.2% 53.3%;
-  --primary-foreground: 210 40% 98%;
+  /* Snow Storm (light greys/whites) */
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
 
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  /* Frost (blue accent colors) */
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  /* Aurora (colorful accent colors) */
+  --nord11: #bf616a; /* red */
+  --nord12: #d08770; /* orange */
+  --nord13: #ebcb8b; /* yellow */
+  --nord14: #a3be8c; /* green */
+  --nord15: #b48ead; /* purple */
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  /* Light theme mappings */
+  --background: var(--nord6); /* Snow Storm brightest */
+  --foreground: var(--nord0); /* Polar Night darkest */
 
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
+  --primary: var(--nord10); /* Frost darker blue */
+  --primary-foreground: var(--nord6);
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 221.2 83.2% 53.3%;
+  --secondary: var(--nord5); /* Snow Storm middle */
+  --secondary-foreground: var(--nord1);
+
+  --muted: var(--nord4); /* Snow Storm darkest */
+  --muted-foreground: var(--nord3);
+
+  --accent: var(--nord7); /* Frost teal */
+  --accent-foreground: var(--nord0);
+
+  --destructive: var(--nord11); /* Aurora red */
+  --destructive-foreground: var(--nord6);
+
+  --border: var(--nord4);
+  --input: var(--nord5);
+  --ring: var(--nord9);
 
   --radius: 0.5rem;
 
@@ -32,30 +58,50 @@
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* Dark theme mappings */
+  --background: var(--nord0); /* Polar Night darkest */
+  --foreground: var(--nord6); /* Snow Storm brightest */
 
-  --primary: 217.2 91.2% 59.8%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: var(--nord8); /* Frost bright blue */
+  --primary-foreground: var(--nord0);
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: var(--nord1); /* Polar Night second darkest */
+  --secondary-foreground: var(--nord5);
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: var(--nord2); /* Polar Night third darkest */
+  --muted-foreground: var(--nord4);
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: var(--nord9); /* Frost blue */
+  --accent-foreground: var(--nord6);
 
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: var(--nord11); /* Aurora red */
+  --destructive-foreground: var(--nord6);
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 224.3 76.3% 48%;
+  --border: var(--nord3);
+  --input: var(--nord1);
+  --ring: var(--nord8);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Additional utility classes for Nord colors */
+@layer utilities {
+  .bg-aurora-red {
+    background-color: var(--nord11);
+  }
+  .bg-aurora-orange {
+    background-color: var(--nord12);
+  }
+  .bg-aurora-yellow {
+    background-color: var(--nord13);
+  }
+  .bg-aurora-green {
+    background-color: var(--nord14);
+  }
+  .bg-aurora-purple {
+    background-color: var(--nord15);
+  }
 }

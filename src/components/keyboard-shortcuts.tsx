@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { ShortcutsHelp } from "./shortcuts-help";
 
 interface KeyboardShortcut {
@@ -15,7 +15,7 @@ export function KeyboardShortcuts() {
   const router = useRouter();
   const [helpOpen, setHelpOpen] = useState(false);
 
-  const shortcuts: KeyboardShortcut[] = [
+  const shortcuts = useMemo<KeyboardShortcut[]>(() => [
     { key: "h", path: "/", description: "Home" },
     { key: "r", path: "/resume", description: "Resume" },
     { key: "b", path: "/blog", description: "Blog" },
@@ -24,7 +24,7 @@ export function KeyboardShortcuts() {
       description: "Show keyboard shortcuts",
       action: () => setHelpOpen(true),
     },
-  ];
+  ], [setHelpOpen]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
