@@ -10,7 +10,7 @@ export default function ResumePage() {
     <PageContainer maxWidth="prose">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Resume</h1>
-        <p className="text-neutral-500 dark:text-neutral-400">
+        <p className="text-muted-foreground">
           Software developer with expertise in modern web technologies
         </p>
       </div>
@@ -20,7 +20,7 @@ export default function ResumePage() {
           <CardTitle>Professional Summary</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-neutral-700 dark:text-neutral-300">
+          <p className="text-foreground/85">
             Detail-oriented software developer with a passion for creating
             elegant solutions to complex problems. Experienced in modern web
             technologies and committed to producing high-quality, maintainable
@@ -41,13 +41,13 @@ export default function ResumePage() {
                 Jan 2020 - Present
               </Badge>
             </div>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Example Company, City
             </p>
             <Separator className="my-4" />
-            <ul className="space-y-2 text-neutral-600 dark:text-neutral-400">
+            <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -68,7 +68,7 @@ export default function ResumePage() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -86,7 +86,7 @@ export default function ResumePage() {
                 <span>Implemented responsive designs using TailwindCSS</span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -107,7 +107,7 @@ export default function ResumePage() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -138,13 +138,13 @@ export default function ResumePage() {
                 Jun 2017 - Dec 2019
               </Badge>
             </div>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Previous Company, City
             </p>
             <Separator className="my-4" />
-            <ul className="space-y-2 text-neutral-600 dark:text-neutral-400">
+            <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -165,7 +165,7 @@ export default function ResumePage() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -185,7 +185,7 @@ export default function ResumePage() {
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-neutral-200 dark:bg-neutral-800 p-1">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -220,9 +220,7 @@ export default function ResumePage() {
               2013 - 2017
             </Badge>
           </div>
-          <p className="text-neutral-600 dark:text-neutral-400 mt-2">
-            University Name, City
-          </p>
+          <p className="text-muted-foreground mt-2">University Name, City</p>
         </CardContent>
       </Card>
 
@@ -287,7 +285,7 @@ export default function ResumePage() {
         <CardContent>
           <div className="flex flex-col md:flex-row flex-wrap gap-6">
             <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800">
+              <div className="p-2 rounded-full bg-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -303,12 +301,10 @@ export default function ResumePage() {
                   />
                 </svg>
               </div>
-              <span className="text-neutral-700 dark:text-neutral-300">
-                your.email@example.com
-              </span>
+              <span className="text-foreground/85">your.email@example.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800">
+              <div className="p-2 rounded-full bg-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -324,12 +320,12 @@ export default function ResumePage() {
                   />
                 </svg>
               </div>
-              <span className="text-neutral-700 dark:text-neutral-300">
+              <span className="text-foreground/85">
                 github.com/yourusername
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800">
+              <div className="p-2 rounded-full bg-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -345,7 +341,7 @@ export default function ResumePage() {
                   />
                 </svg>
               </div>
-              <span className="text-neutral-700 dark:text-neutral-300">
+              <span className="text-foreground/85">
                 linkedin.com/in/yourusername
               </span>
             </div>

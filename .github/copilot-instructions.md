@@ -42,6 +42,75 @@ A modern personal website that includes:
 - **Vite**: For fast development and bundling
   - Used via Next.js integration
 
+### Aesthetics
+
+- **Nord color scheme**: Used throughout the application for consistent branding
+  - Implemented via CSS variables and Tailwind configuration
+  - Color palette defined in `src/lib/nord-colors.ts`
+  - Semantic color mapping in `tailwind.config.js` and `globals.css`
+  - All neutral Tailwind colors have been replaced with Nord equivalents
+  - Uses semantic variables like `text-muted-foreground` instead of direct color references
+
+#### Nord Color Palette Structure
+
+The Nord color palette is organized into four distinct color groups:
+
+1. **Polar Night** (dark greys/blacks - nord0 to nord3)
+
+   - Used for dark backgrounds, text in light mode
+   - Example: `#2E3440` (nord0) - Darkest background color
+
+2. **Snow Storm** (light greys/whites - nord4 to nord6)
+
+   - Used for light backgrounds, text in dark mode
+   - Example: `#ECEFF4` (nord6) - Brightest snow storm color
+
+3. **Frost** (blue accent colors - nord7 to nord10)
+
+   - Used for interactive elements, links, accents
+   - Example: `#88C0D0` (nord8) - Bright blue accent
+
+4. **Aurora** (colorful accent colors - nord11 to nord15)
+   - Used for specific semantic contexts (errors, warnings, etc.)
+   - Example: `#BF616A` (nord11) - Red for errors
+
+#### Color Usage Guidelines
+
+1. **Prefer Semantic Variables**:
+
+   ```jsx
+   <p className="text-muted-foreground">Some text</p>
+   <div className="bg-secondary">A container</div>
+   <div className="border border-border">A border</div>
+   ```
+
+2. **Use Opacity Modifiers** for variants:
+
+   ```jsx
+   <p className="text-foreground/75">75% opacity text</p>
+   <p className="text-primary/90">90% opacity primary color</p>
+   ```
+
+3. **Direct Access** when necessary:
+   ```jsx
+   <div className="bg-nord-8">Frost blue background</div>
+   <div className="text-polar-night-darkest">Dark text</div>
+   ```
+
+#### Semantic Color Mapping
+
+| Semantic Name    | Light Theme | Dark Theme | Usage                  |
+| ---------------- | ----------- | ---------- | ---------------------- |
+| background       | nord6       | nord0      | Page backgrounds       |
+| foreground       | nord0       | nord6      | Primary text           |
+| primary          | nord10      | nord8      | Primary buttons, links |
+| secondary        | nord5       | nord1      | Secondary containers   |
+| muted            | nord4       | nord2      | Subdued elements       |
+| muted-foreground | nord3       | nord4      | Secondary text         |
+| accent           | nord7       | nord9      | Accent elements        |
+| border           | nord4       | nord3      | Borders and dividers   |
+| destructive      | nord11      | nord11     | Error indicators       |
+
 ## Project Structure
 
 ```
@@ -60,6 +129,7 @@ website2/
 │   │       └── theme-provider.tsx  # Dark/light mode provider
 │   ├── lib/
 │   │   └── theme-script.ts # Theme initialization script
+│   │   └── nord-colors.ts  # Nord color palette definitions
 │   └── ...
 ├── public/                 # Static assets
 ├── tailwind.config.js      # Tailwind configuration

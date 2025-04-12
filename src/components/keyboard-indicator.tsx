@@ -34,10 +34,10 @@ export function KeyboardIndicator() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-background border border-neutral-200 dark:border-neutral-800 rounded-lg p-3 shadow-lg z-50 flex items-center gap-3">
+    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-background border border-border rounded-lg p-3 shadow-lg z-50 flex items-center gap-3">
       <p className="text-sm">
         Press{" "}
-        <kbd className="px-1.5 py-0.5 bg-neutral-100 dark:bg-neutral-800 rounded font-mono text-xs">
+        <kbd className="px-1.5 py-0.5 bg-secondary rounded font-mono text-xs">
           ?
         </kbd>{" "}
         for keyboard shortcuts

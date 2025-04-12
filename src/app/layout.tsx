@@ -43,10 +43,10 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <KeyboardShortcuts />
-          <header className="bg-background border-b border-neutral-200 dark:border-neutral-800">
+          <header className="bg-background border-b border-border">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
               <Link href="/" className="text-xl font-bold">
-                about.sonkin.net
+                sonkin.net
               </Link>
               <div className="flex items-center gap-2">
                 <nav className="flex items-center gap-1 md:gap-2">
@@ -80,11 +80,11 @@ export default function RootLayout({
             </div>
           </header>
           <main className="flex-grow">{children}</main>
-          <footer className="bg-background border-t border-neutral-200 dark:border-neutral-800 py-6">
+          <footer className="bg-background border-t border-border py-6">
             <div className="container mx-auto px-4 flex flex-col items-center gap-4">
               <SocialLinks />
               <Separator className="my-4 w-1/3" />
-              <div className="text-sm text-neutral-500 dark:text-neutral-400">
+              <div className="text-sm text-muted-foreground">
                 © {new Date().getFullYear()} My Personal Website. All rights
                 reserved.
               </div>
