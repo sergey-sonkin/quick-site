@@ -23,8 +23,17 @@ export function PageContainer({
   };
 
   return (
-    <div className={cn("w-full py-8 mx-auto container", className)} {...props}>
-      <div className={cn("mx-auto", maxWidthClasses[maxWidth])}>{children}</div>
+    <div className={cn("w-full py-8", className)} {...props}>
+      <div
+        className={cn(
+          "container mx-auto px-4",
+          maxWidthClasses[maxWidth],
+          // Add width constraints to ensure consistency
+          "w-full"
+        )}
+      >
+        {children}
+      </div>
     </div>
   );
 }

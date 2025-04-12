@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force scrollbar to always be visible to prevent layout shifts */
+html {
+  overflow-y: scroll;
+}
+
 :root {
   /* Nord color palette CSS variables */
   /* Polar Night (dark greys/blacks) */
