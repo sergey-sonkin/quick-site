@@ -55,6 +55,11 @@ website2/
 │   │   ├── globals.css     # Global styles and Tailwind imports
 │   │   ├── layout.tsx      # Root layout with navigation
 │   │   └── page.tsx        # Home/landing page
+│   ├── components/
+│   │   └── ui/             # UI components from shadcn
+│   │       └── theme-provider.tsx  # Dark/light mode provider
+│   ├── lib/
+│   │   └── theme-script.ts # Theme initialization script
 │   └── ...
 ├── public/                 # Static assets
 ├── tailwind.config.js      # Tailwind configuration
@@ -80,9 +85,16 @@ website2/
    - Contact information
 
 3. **Blog Section**
+
    - List of blog posts
    - Individual blog post pages
    - Categorization or tagging (future)
+
+4. **Theme System**
+   - Dark/light mode toggle with system preference detection
+   - Persistence via localStorage
+   - Flash-free theme switching with pre-hydration script
+   - Default fallback to dark mode when system preference unavailable
 
 ## Deployment
 
@@ -121,6 +133,7 @@ pnpm build
 - Optimize images (using Next.js Image component)
 - Minimize JavaScript bundle size
 - Implement proper code splitting
+- Prevent FOUC (Flash of Unstyled Content) with theme script
 
 ## Future Enhancements
 
@@ -133,7 +146,7 @@ pnpm build
 
    - Contact form with validation
    - Project showcase with filtering
-   - Dark/light mode toggle
+   - ~~Dark/light mode toggle~~ (Implemented)
 
 3. **SEO Improvements**
 
@@ -152,6 +165,14 @@ pnpm build
 - TailwindCSS v4 had compatibility issues; using v3 instead
 - PostCSS configuration requires CommonJS format (not ESM)
 - File naming: use `.js` for config files, not `.mjs`
+
+### Theme Implementation
+
+- Uses class strategy for dark mode via Tailwind (`darkMode: "class"`)
+- Theme preferences stored in localStorage
+- Pre-hydration script prevents theme flicker
+- System preference detection with dark mode fallback
+- Three theme options: light, dark, and system (follows OS preference)
 
 ### Development Workflow
 
