@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -15,220 +14,165 @@ export default function ResumePage() {
         </p>
       </div>
 
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Professional Summary</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-foreground/85">
-            Detail-oriented software developer with a passion for creating
-            elegant solutions to complex problems. Experienced in modern web
-            technologies and committed to producing high-quality, maintainable
-            code. Strong communication skills and experience working in
-            collaborative team environments.
-          </p>
-        </CardContent>
-      </Card>
+      {/* Professional Summary - No Card */}
+      <div className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">Professional Summary</h2>
+        <p className="text-foreground/90 leading-relaxed">
+          Detail-oriented software developer with a passion for creating elegant
+          solutions to complex problems. Experienced in modern web technologies
+          and committed to producing high-quality, maintainable code. Strong
+          communication skills and experience working in collaborative team
+          environments.
+        </p>
+      </div>
 
+      {/* Experience - No Cards */}
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-6">Experience</h2>
+        <h2 className="text-xl font-semibold mb-6">Experience</h2>
 
-        <Card className="mb-6">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-              <h3 className="text-xl font-medium">Software Engineer</h3>
-              <Badge variant="outline" className="mt-2 md:mt-0">
-                August 2023 - Present
+        {/* Narmi Experience - No Card */}
+        <div className="mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+            <h3 className="text-lg font-bold text-foreground">Narmi</h3>
+            <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
+              Aug 2023 - Present
+            </Badge>
+          </div>
+          <p className="text-muted-foreground mb-5">New York, NY</p>
+          <Separator className="my-6 opacity-30" />
+
+          {/* Software Engineer II Role */}
+          <div className="mb-10 relative">
+            <div className="hidden md:block absolute left-0 h-full w-0.5 bg-primary/20"></div>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+              <div className="flex items-center">
+                <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
+                <h4 className="text-md font-semibold ml-0 md:ml-2">
+                  Software Engineer II
+                </h4>
+              </div>
+              <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
+                Dec 2024 - Present
               </Badge>
             </div>
-            <p className="text-lg text-muted-foreground mb-4">
-              Example Company, City
-            </p>
-            <Separator className="my-4" />
-            <ul className="space-y-2 text-muted-foreground">
+            <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
+                <span className="text-primary mr-2">•</span>
+                <span>
+                  Led development of key features for enterprise clients
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>
+                  Mentored junior developers and conducted code reviews
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>
+                  Architected scalable solutions for complex financial
+                  applications
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Software Engineer I Role */}
+          <div className="relative">
+            <div className="hidden md:block absolute left-0 top-0 h-full w-0.5 bg-primary/20"></div>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+              <div className="flex items-center">
+                <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
+                <h4 className="text-md font-semibold ml-0 md:ml-2">
+                  Software Engineer I
+                </h4>
+              </div>
+              <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
+                Aug 2023 - Nov 2024
+              </Badge>
+            </div>
+            <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
                 <span>
                   Developed and maintained scalable web applications using React
                   and TypeScript
                 </span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
+                <span className="text-primary mr-2">•</span>
                 <span>Implemented responsive designs using TailwindCSS</span>
               </li>
               <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
+                <span className="text-primary mr-2">•</span>
                 <span>
                   Collaborated with cross-functional teams to deliver
                   high-quality software solutions
                 </span>
               </li>
-              <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span>
-                  Mentored junior developers and conducted code reviews
-                </span>
-              </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
-        <Card className="mb-6">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-              <h3 className="text-xl font-medium">Web Developer</h3>
-              <Badge variant="outline" className="mt-2 md:mt-0">
-                Jun 2017 - Dec 2019
-              </Badge>
-            </div>
-            <p className="text-lg text-muted-foreground mb-4">
-              Previous Company, City
-            </p>
-            <Separator className="my-4" />
-            <ul className="space-y-2 text-muted-foreground">
-              <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span>
-                  Built responsive web applications using modern JavaScript
-                  frameworks
-                </span>
-              </li>
-              <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span>
-                  Collaborated with designers to implement UI/UX designs
-                </span>
-              </li>
-              <li className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span>Optimized application performance and accessibility</span>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+        {/* Previous Experience - No Card */}
+        <div className="mb-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+            <h3 className="text-lg font-bold text-foreground">
+              Data Engineer Intern
+            </h3>
+            <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
+              Jun 2017 - Dec 2019
+            </Badge>
+          </div>
+          <p className="text-muted-foreground mb-5">Boston, MA</p>
+          <Separator className="my-6 opacity-30" />
+          <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span>
+                Built responsive web applications using modern JavaScript
+                frameworks
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span>
+                Collaborated with designers to implement UI/UX designs
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span>Optimized application performance and accessibility</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
+      {/* Education - No Card */}
       <div className="mb-8">
-        {/* <h2 className="text-2xl font-semibold mb-6">Education</h2> */}
-        <h2 className="text-2xl font-semibold mb-6">Education</h2>
-        <Card className="mb-6">
-          <CardContent className="pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-              <h3 className="text-xl font-medium">The University of Chicago</h3>
-              <Badge variant="outline" className="mt-2 md:mt-0">
-                Sep 2018 - Jun 2022
-              </Badge>
-            </div>
-            <p className="text-lg text-muted-foreground mb-4">
-              Chicago, Illinois
-            </p>
-            <Separator className="my-4" />
-            <div className="space-y-3">
-              <div className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
+        <h2 className="text-xl font-semibold mb-6">Education</h2>
+
+        <div>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+            <h3 className="text-lg font-bold">The University of Chicago</h3>
+            <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
+              Sep 2018 - Jun 2022
+            </Badge>
+          </div>
+          <p className="text-muted-foreground mb-5">Chicago, Illinois</p>
+          <Separator className="my-6 opacity-30" />
+
+          {/* Degree details - using columns instead of boxes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+            {/* First Major */}
+            <div>
+              <div className="flex items-center mb-4">
+                <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent/20 text-accent mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -236,20 +180,39 @@ export default function ResumePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                   </svg>
-                </div>
-                <span className="text-foreground/85">
-                  Bachelor's - Computer Science with a Specialization in Machine
-                  Learning
                 </span>
+                <h4 className="text-md font-semibold">Computer Science</h4>
               </div>
-              <div className="flex items-start">
-                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
+              <p className="text-foreground/80 mb-2 ml-11">
+                Bachelor of Science
+              </p>
+              <p className="text-muted-foreground mb-4 ml-11">
+                Specialization in Machine Learning
+              </p>
+              <div className="flex flex-wrap gap-2 ml-11">
+                <Badge variant="outline" className="text-foreground/80">
+                  Algorithm Design
+                </Badge>
+                <Badge variant="outline" className="text-foreground/80">
+                  AI Fundamentals
+                </Badge>
+                <Badge variant="outline" className="text-foreground/80">
+                  Deep Learning
+                </Badge>
+              </div>
+            </div>
+
+            {/* Second Major */}
+            <div>
+              <div className="flex items-center mb-4">
+                <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -257,142 +220,207 @@ export default function ResumePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                    <path d="M18 8a6 6 0 0 0-6-6 6 6 0 0 0-6 6c0 7 6 13 6 13s6-6 6-13z"></path>
+                    <circle cx="12" cy="8" r="2"></circle>
                   </svg>
-                </div>
-                <span className="text-foreground/85">
-                  Bachelor's - Statistics
                 </span>
+                <h4 className="text-md font-semibold">Statistics</h4>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Skills</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Tabs defaultValue="tech">
-            <TabsList className="w-full mb-4">
-              <TabsTrigger value="tech" className="flex-1">
-                Technical
-              </TabsTrigger>
-              <TabsTrigger value="soft" className="flex-1">
-                Soft Skills
-              </TabsTrigger>
-              <TabsTrigger value="tools" className="flex-1">
-                Tools
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="tech" className="space-y-4">
-              <div className="flex flex-wrap gap-2">
-                <Badge>JavaScript</Badge>
-                <Badge>TypeScript</Badge>
-                <Badge>React</Badge>
-                <Badge>Next.js</Badge>
-                <Badge>TailwindCSS</Badge>
-                <Badge>Node.js</Badge>
-                <Badge>HTML5/CSS3</Badge>
-                <Badge>REST APIs</Badge>
-                <Badge>GraphQL</Badge>
+              <p className="text-foreground/80 mb-2 ml-11">
+                Bachelor of Science
+              </p>
+              <p className="text-muted-foreground mb-4 ml-11">
+                Focus on Computational Methods
+              </p>
+              <div className="flex flex-wrap gap-2 ml-11">
+                <Badge variant="outline" className="text-foreground/80">
+                  Data Analysis
+                </Badge>
+                <Badge variant="outline" className="text-foreground/80">
+                  Probability Theory
+                </Badge>
+                <Badge variant="outline" className="text-foreground/80">
+                  Statistical Modeling
+                </Badge>
               </div>
-            </TabsContent>
-            <TabsContent value="soft" className="space-y-4">
-              <div className="flex flex-wrap gap-2">
-                <Badge>Team Collaboration</Badge>
-                <Badge>Problem Solving</Badge>
-                <Badge>Communication</Badge>
-                <Badge>Time Management</Badge>
-                <Badge>Adaptability</Badge>
-                <Badge>Leadership</Badge>
-              </div>
-            </TabsContent>
-            <TabsContent value="tools" className="space-y-4">
-              <div className="flex flex-wrap gap-2">
-                <Badge>Git</Badge>
-                <Badge>VS Code</Badge>
-                <Badge>Figma</Badge>
-                <Badge>Docker</Badge>
-                <Badge>JIRA</Badge>
-                <Badge>Webpack</Badge>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Contact</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col md:flex-row flex-wrap gap-6">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-secondary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <span className="text-foreground/85">your.email@example.com</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-secondary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                  />
-                </svg>
-              </div>
-              <span className="text-foreground/85">
-                github.com/yourusername
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-full bg-secondary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <span className="text-foreground/85">
-                linkedin.com/in/yourusername
-              </span>
             </div>
           </div>
-        </CardContent>
-      </Card>
+
+          {/* Achievement note - no box, just styled text */}
+          {/* <div className="mt-8 pl-4 border-l-2 border-primary/30">
+            <p className="text-foreground/90 italic">
+              <span className="font-semibold not-italic">Achievement:</span>{" "}
+              Graduated with double major, completing comprehensive research
+              projects in both fields while maintaining Dean's List standing.
+            </p>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Skills - No Card */}
+      <div className="mb-8">
+        <h2 className="text-xl font-semibold mb-6">Skills</h2>
+        <Tabs defaultValue="tech" className="w-full">
+          <TabsList className="w-full mb-6 bg-transparent border-b border-border">
+            <TabsTrigger
+              value="tech"
+              className="flex-1 data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none bg-transparent data-[state=active]:text-primary"
+            >
+              Technical
+            </TabsTrigger>
+            <TabsTrigger
+              value="soft"
+              className="flex-1 data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none bg-transparent data-[state=active]:text-primary"
+            >
+              Soft Skills
+            </TabsTrigger>
+            <TabsTrigger
+              value="tools"
+              className="flex-1 data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none bg-transparent data-[state=active]:text-primary"
+            >
+              Tools
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="tech" className="space-y-4 mt-2">
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                JavaScript
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                TypeScript
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                React
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                Next.js
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                TailwindCSS
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                Node.js
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                HTML5/CSS3
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                REST APIs
+              </Badge>
+              <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
+                GraphQL
+              </Badge>
+            </div>
+          </TabsContent>
+          <TabsContent value="soft" className="space-y-4 mt-2">
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Team Collaboration
+              </Badge>
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Problem Solving
+              </Badge>
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Communication
+              </Badge>
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Time Management
+              </Badge>
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Adaptability
+              </Badge>
+              <Badge className="bg-primary/5 hover:bg-primary/10 text-primary border-0">
+                Leadership
+              </Badge>
+            </div>
+          </TabsContent>
+          <TabsContent value="tools" className="space-y-4 mt-2">
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="outline">Git</Badge>
+              <Badge variant="outline">VS Code</Badge>
+              <Badge variant="outline">Figma</Badge>
+              <Badge variant="outline">Docker</Badge>
+              <Badge variant="outline">JIRA</Badge>
+              <Badge variant="outline">Webpack</Badge>
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
+
+      {/* Contact - No Card */}
+      <div>
+        <h2 className="text-xl font-semibold mb-6">Contact</h2>
+        <div className="flex flex-col md:flex-row flex-wrap gap-y-5 gap-x-8">
+          <a
+            href="mailto:sergey@sonkin.net"
+            className="flex items-center gap-3 group hover:text-primary transition-colors"
+          >
+            <div className="p-2 rounded-full bg-primary/10 text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <span>sergey@sonkin.net</span>
+          </a>
+          {/* <a
+            href="https://github.com/sergey-sonkin"
+            target="_blank"
+            className="flex items-center gap-3 group hover:text-accent transition-colors"
+          >
+            <div className="p-2 rounded-full bg-accent/10 text-accent">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                />
+              </svg>
+            </div>
+            <span>github.com/sergey-sonkin</span>
+          </a> */}
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            className="flex items-center gap-3 group hover:text-primary transition-colors"
+          >
+            <div className="p-2 rounded-full bg-primary/10 text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <span>linkedin.com/in/yourusername</span>
+          </a>
+        </div>
+      </div>
     </PageContainer>
   );
 }

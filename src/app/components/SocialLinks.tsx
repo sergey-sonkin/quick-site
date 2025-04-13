@@ -8,7 +8,7 @@ export default function SocialLinks({ className = "" }: SocialLinksProps) {
   return (
     <div className={`flex space-x-4 ${className}`}>
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/sergey-sonkin"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"

@@ -23,16 +23,16 @@ export default function Home() {
           <div className="w-full md:w-1/2 order-2 md:order-1 space-y-6">
             <div className="space-y-2">
               <h1 className="text-4xl font-bold">{"Sergey Sonkin"}</h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-neutral-500 dark:text-neutral-400">
                 Software Engineer @ Narmi
               </p>
             </div>
 
-            <p className="text-foreground/75">
-              I&apos;m passionate about building beautiful and functional web
+            <p className="text-neutral-600 dark:text-neutral-300">
+              {`I'm passionate about building beautiful and functional web
               experiences that solve real problems. Welcome to my personal
               website where you can learn about my professional journey and
-              thoughts.
+              thoughts.`}
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -54,10 +54,10 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2">
-            <Avatar className="w-64 h-64 border-4 border-border">
+            <Avatar className="w-64 h-64 border-4 border-neutral-200 dark:border-neutral-800">
               {/* Replace with your actual photo */}
               <AvatarImage src="/profile-photo.jpg" alt="Your Name" />
-              <AvatarFallback className="text-xl bg-secondary">
+              <AvatarFallback className="text-xl bg-neutral-100 dark:bg-neutral-800">
                 YN
               </AvatarFallback>
             </Avatar>
@@ -79,7 +79,7 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
                   Built with React, TypeScript and TailwindCSS. This project
                   demonstrates my ability to create elegant, responsive user
                   interfaces.
@@ -100,7 +100,7 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
                   A full-stack application built with Next.js that integrates
                   with multiple APIs and handles complex state management.
                 </p>
@@ -120,7 +120,7 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-neutral-500 dark:text-neutral-400">
                   An innovative solution that demonstrates my problem-solving
                   skills and attention to detail in both design and
                   implementation.
