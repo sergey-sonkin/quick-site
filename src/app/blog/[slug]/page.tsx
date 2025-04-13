@@ -27,13 +27,13 @@ export default function BlogPostPage({ params }: BlogPostParams) {
           tags: ["Next.js", "TypeScript", "Web Development"],
           content: (
             <>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Next.js combined with TypeScript provides a powerful foundation
                 for modern web development. In this post, we&apos;ll walk
                 through setting up a new project with these technologies.
               </p>
               <h2 className="text-xl font-semibold mt-8 mb-3">Why Next.js?</h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Next.js offers a great developer experience with features like
                 server-side rendering, static site generation, API routes, and
                 more. It&apos;s a production-ready framework that makes building
@@ -42,7 +42,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Adding TypeScript
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 TypeScript brings static typing to JavaScript, helping catch
                 errors early in the development process and providing better
                 tooling support. Next.js has built-in TypeScript support, making
@@ -51,16 +51,16 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Getting Started
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 To create a new Next.js project with TypeScript, you can use the
                 following command:
               </p>
               <Card className="my-6">
-                <CardContent className="p-4 font-mono text-sm overflow-x-auto bg-neutral-50 dark:bg-neutral-900">
+                <CardContent className="p-4 font-mono text-sm overflow-x-auto bg-secondary">
                   npx create-next-app@latest my-app --typescript
                 </CardContent>
               </Card>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 This will set up a new project with all the necessary
                 configuration for TypeScript. From there, you can start building
                 your application with confidence!
@@ -75,7 +75,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
           tags: ["TailwindCSS", "CSS", "Design"],
           content: (
             <>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 After using various CSS frameworks and methodologies over the
                 years, I&apos;ve found TailwindCSS to be the most efficient and
                 enjoyable way to style web applications.
@@ -83,7 +83,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Utility-First Approach
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 TailwindCSS takes a utility-first approach to styling, providing
                 small, single-purpose classes that can be composed to build any
                 design. This eliminates the need to write custom CSS in most
@@ -92,7 +92,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Rapid Development
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 With TailwindCSS, I can build UI components much faster because
                 I don&apos;t have to context-switch between HTML and CSS files.
                 Everything is right there in the markup, making it easy to
@@ -101,13 +101,13 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Responsive Design Made Simple
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 TailwindCSS makes responsive design incredibly straightforward
                 with its intuitive breakpoint prefixes (sm:, md:, lg:, etc.).
                 This makes it easy to create layouts that work well on all
                 screen sizes.
               </p>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 If you haven&apos;t tried TailwindCSS yet, I highly recommend
                 giving it a shot for your next project!
               </p>
@@ -121,29 +121,29 @@ export default function BlogPostPage({ params }: BlogPostParams) {
           tags: ["Accessibility", "Web Development", "UI/UX"],
           content: (
             <>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Accessibility is a critical aspect of web development that
                 ensures all users, regardless of ability, can use your
                 application effectively. Here are some key considerations for
                 building accessible web applications.
               </p>
               <h2 className="text-xl font-semibold mt-8 mb-3">Semantic HTML</h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Using semantic HTML elements is the foundation of accessibility.
                 Elements like{" "}
-                <code className="px-1 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 font-mono text-sm">
+                <code className="px-1 py-0.5 rounded bg-secondary font-mono text-sm">
                   nav
                 </code>
                 ,{" "}
-                <code className="px-1 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 font-mono text-sm">
+                <code className="px-1 py-0.5 rounded bg-secondary font-mono text-sm">
                   header
                 </code>
                 ,{" "}
-                <code className="px-1 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 font-mono text-sm">
+                <code className="px-1 py-0.5 rounded bg-secondary font-mono text-sm">
                   main
                 </code>
                 , and{" "}
-                <code className="px-1 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 font-mono text-sm">
+                <code className="px-1 py-0.5 rounded bg-secondary font-mono text-sm">
                   button
                 </code>{" "}
                 convey meaning to assistive technologies.
@@ -151,7 +151,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 Keyboard Navigation
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Ensure all interactive elements can be accessed and used with a
                 keyboard alone. This includes proper focus management and
                 visible focus indicators.
@@ -159,20 +159,20 @@ export default function BlogPostPage({ params }: BlogPostParams) {
               <h2 className="text-xl font-semibold mt-8 mb-3">
                 ARIA Attributes
               </h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 When HTML semantics aren&apos;t enough, ARIA (Accessible Rich
                 Internet Applications) attributes can provide additional context
                 for assistive technologies. Use them judiciously and test
                 thoroughly.
               </p>
               <h2 className="text-xl font-semibold mt-8 mb-3">Testing</h2>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 Regular testing with screen readers and other assistive
                 technologies is essential. Tools like Lighthouse, axe, and Wave
                 can help identify accessibility issues, but nothing replaces
                 testing with real users.
               </p>
-              <p className="mb-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              <p className="mb-4 text-foreground/75 leading-relaxed">
                 By prioritizing accessibility from the start of your project,
                 you can create web applications that are usable by everyone,
                 which not only expands your audience but is also the right thing
@@ -220,9 +220,7 @@ export default function BlogPostPage({ params }: BlogPostParams) {
           <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
 
           {post.date && (
-            <div className="text-neutral-500 dark:text-neutral-400 mb-4">
-              {post.date}
-            </div>
+            <div className="text-muted-foreground mb-4">{post.date}</div>
           )}
 
           {post.tags && post.tags.length > 0 && (

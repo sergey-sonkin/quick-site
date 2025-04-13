@@ -56,7 +56,7 @@ export default function BlogPage() {
     <PageContainer maxWidth="prose">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Blog</h1>
-        <p className="text-neutral-500 dark:text-neutral-400">
+        <p className="text-muted-foreground">
           My thoughts on technology, design, and development.
         </p>
       </div>
@@ -65,7 +65,7 @@ export default function BlogPage() {
         {blogPosts.map((post) => (
           <Card key={post.id}>
             <CardHeader>
-              <div className="text-sm text-neutral-500 dark:text-neutral-400 mb-1">
+              <div className="text-sm text-muted-foreground mb-1">
                 {post.date}
               </div>
               <CardTitle className="text-2xl">

@@ -36,9 +36,9 @@ export default function ResumePage() {
         <Card className="mb-6">
           <CardContent className="pt-6">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
-              <h3 className="text-xl font-medium">Senior Developer</h3>
+              <h3 className="text-xl font-medium">Software Engineer</h3>
               <Badge variant="outline" className="mt-2 md:mt-0">
-                Jan 2020 - Present
+                August 2023 - Present
               </Badge>
             </div>
             <p className="text-lg text-muted-foreground mb-4">
@@ -207,22 +207,67 @@ export default function ResumePage() {
         </Card>
       </div>
 
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Education</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <h3 className="text-xl font-medium">
-              Bachelor of Science in Computer Science
-            </h3>
-            <Badge variant="outline" className="mt-2 md:mt-0">
-              2013 - 2017
-            </Badge>
-          </div>
-          <p className="text-muted-foreground mt-2">University Name, City</p>
-        </CardContent>
-      </Card>
+      <div className="mb-8">
+        {/* <h2 className="text-2xl font-semibold mb-6">Education</h2> */}
+        <h2 className="text-2xl font-semibold mb-6">Education</h2>
+        <Card className="mb-6">
+          <CardContent className="pt-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+              <h3 className="text-xl font-medium">The University of Chicago</h3>
+              <Badge variant="outline" className="mt-2 md:mt-0">
+                Sep 2018 - Jun 2022
+              </Badge>
+            </div>
+            <p className="text-lg text-muted-foreground mb-4">
+              Chicago, Illinois
+            </p>
+            <Separator className="my-4" />
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span className="text-foreground/85">
+                  Bachelor's - Computer Science with a Specialization in Machine
+                  Learning
+                </span>
+              </div>
+              <div className="flex items-start">
+                <div className="mr-2 mt-1 rounded-full bg-secondary p-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span className="text-foreground/85">
+                  Bachelor's - Statistics
+                </span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
       <Card className="mb-8">
         <CardHeader>
