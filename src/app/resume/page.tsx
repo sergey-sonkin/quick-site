@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PageContainer } from "@/components/layout/page-container";
+import { BulletPoint } from "./(components)/bullet-point";
 
 /**
  * Resume Page
@@ -82,29 +83,31 @@ export default function ResumePage() {
                 </h4>
               </div>
               <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
-                Dec 2024 - Present
+                Dec 2024
               </Badge>
             </div>
             <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>
-                  Led development of key features for enterprise clients
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>
-                  Mentored junior developers and conducted code reviews
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>
-                  Architected scalable solutions for complex financial
-                  applications
-                </span>
-              </li>
+              <BulletPoint>
+                Continue to own many responsibilities owned as Software Engineer
+                I, building larger in scope features and owning work usually
+                done by other pods to keep our financial institutions going live
+                on schedule
+              </BulletPoint>
+              <BulletPoint>
+                Expanded internal tooling to speed up routine deploys and
+                incident response
+              </BulletPoint>
+              <BulletPoint>
+                Automated mobile app screenshot process, saving hundreds of
+                hours yearly
+              </BulletPoint>
+              <BulletPoint>
+                Move Solutions team forward by triaging issues and helping
+                implement process changes as most senior IC on team
+              </BulletPoint>
+              <BulletPoint>
+                Onboarded another 2 new software engineers onto the team
+              </BulletPoint>
             </ul>
           </div>
 
@@ -117,32 +120,49 @@ export default function ResumePage() {
                 {/* Position marker */}
                 <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
                 <h4 className="text-md font-semibold ml-0 md:ml-2">
-                  Software Engineer I
+                  Software Engineer
                 </h4>
               </div>
               <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
-                Aug 2023 - Nov 2024
+                Aug 2023
               </Badge>
             </div>
             <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>
-                  Developed and maintained scalable web applications using React
-                  and TypeScript
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>Implemented responsive designs using TailwindCSS</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>
-                  Collaborated with cross-functional teams to deliver
-                  high-quality software solutions
-                </span>
-              </li>
+              <BulletPoint>
+                As a software engineer on the Solutions pod, helped 18 financial
+                institutions go live by building out features, spinning up
+                infrastructure, investigating issues and upgrading integrations
+                to support aggressive go-live schedules
+              </BulletPoint>
+              <BulletPoint>
+                As the Solutions Point Person assigned to the Community Savings
+                go-live, helped the financial institution go live with Narmi in
+                49 days, helping their institution secure $2.5 million in
+                deposits and setting a company record for fastest go-live 4
+                months into the job
+              </BulletPoint>
+              <BulletPoint>
+                Triaged and responded to hundreds of emails sent to
+                support@narmi.com that required engineering input
+              </BulletPoint>
+              <BulletPoint>
+                Acted as reporter and/or responder on dozens of incidents
+              </BulletPoint>
+              <BulletPoint>
+                Acted as sole engineering representative on numerous debugging
+                calls and working sessions with both technical and non-technical
+                folk at financial institutions and third parties
+              </BulletPoint>
+              <BulletPoint>
+                Earned Quarterly Employee Recognition Award in Q1 2024
+              </BulletPoint>
+              <BulletPoint>
+                Built out tooling for reducing time to resolution for issues and
+                incidents
+              </BulletPoint>
+              <BulletPoint>
+                Onboarded 2 new software engineers onto the team
+              </BulletPoint>
             </ul>
           </div>
         </div>
@@ -160,23 +180,16 @@ export default function ResumePage() {
           <p className="text-muted-foreground mb-5">Boston, MA</p>
           <Separator className="my-6 opacity-30" />
           <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>
-                Built responsive web applications using modern JavaScript
-                frameworks
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>
-                Collaborated with designers to implement UI/UX designs
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Optimized application performance and accessibility</span>
-            </li>
+            <BulletPoint>
+              Built responsive web applications using modern JavaScript
+              frameworks
+            </BulletPoint>
+            <BulletPoint>
+              Collaborated with designers to implement UI/UX designs
+            </BulletPoint>
+            <BulletPoint>
+              Optimized application performance and accessibility
+            </BulletPoint>
           </ul>
         </div>
       </div>
@@ -279,13 +292,13 @@ export default function ResumePage() {
           </div>
 
           {/* Achievement callout using border instead of box */}
-          <div className="mt-8 pl-4 border-l-2 border-primary/30">
+          {/* <div className="mt-8 pl-4 border-l-2 border-primary/30">
             <p className="text-foreground/90 italic">
               <span className="font-semibold not-italic">Achievement:</span>{" "}
               Graduated with double major, completing comprehensive research
               projects in both fields while maintaining Dean's List standing.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
