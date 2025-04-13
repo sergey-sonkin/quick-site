@@ -205,29 +205,6 @@ pnpm build
 - Implement proper code splitting
 - Prevent FOUC (Flash of Unstyled Content) with theme script
 
-## Future Enhancements
-
-1. **Content Management**
-
-   - Consider headless CMS integration for blog posts
-   - Options: Contentful, Sanity, or MDX files
-
-2. **Interactive Elements**
-
-   - Contact form with validation
-   - Project showcase with filtering
-   - ~~Dark/light mode toggle~~ (Implemented)
-
-3. **SEO Improvements**
-
-   - Metadata optimization
-   - Open Graph tags
-   - Structured data
-
-4. **Analytics**
-   - Privacy-focused analytics integration
-   - Options: Plausible, Simple Analytics, or self-hosted solutions
-
 ## Technical Notes
 
 ### Configuration Issues

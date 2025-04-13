@@ -1,9 +1,36 @@
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import { PageContainer } from "@/components/layout/page-container";
 
+/**
+ * Resume Page
+ *
+ * Design Patterns:
+ * ---------------
+ * 1. Typography Scale
+ *    - text-3xl: Primary page headers (h1)
+ *    - text-xl: Section headers (h2)
+ *    - text-lg: Company/organization names (h3)
+ *    - text-md: Role titles/sub-elements (h4)
+ *    - Default base size for body text
+ *
+ * 2. Visual Separation Strategy
+ *    - Vertical spacing (mb-8) between major sections
+ *    - Separators with reduced opacity instead of boxes/borders
+ *    - Consistent internal component spacing
+ *    - Typography and spacing over explicit containers
+ *
+ * 3. Career Progression Visualization
+ *    - Timeline with vertical connecting line for positions at same company
+ *    - Circular markers to denote each position
+ *    - Subtle styling to show relationship between elements
+ *
+ * 4. Content Organization
+ *    - Two-column grid for related content (education)
+ *    - Consistent badge styling for dates: bg-primary/10 text-primary border-0
+ *    - Bulleted lists with colored bullets (text-primary)
+ */
 export default function ResumePage() {
   return (
     <PageContainer maxWidth="prose">
@@ -14,7 +41,7 @@ export default function ResumePage() {
         </p>
       </div>
 
-      {/* Professional Summary - No Card */}
+      {/* Professional Summary section */}
       <div className="mb-10">
         <h2 className="text-xl font-semibold mb-4">Professional Summary</h2>
         <p className="text-foreground/90 leading-relaxed">
@@ -26,11 +53,11 @@ export default function ResumePage() {
         </p>
       </div>
 
-      {/* Experience - No Cards */}
+      {/* Experience section with career progression timeline */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-6">Experience</h2>
 
-        {/* Narmi Experience - No Card */}
+        {/* Narmi Experience with timeline showing promotion */}
         <div className="mb-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
             <h3 className="text-lg font-bold text-foreground">Narmi</h3>
@@ -41,11 +68,14 @@ export default function ResumePage() {
           <p className="text-muted-foreground mb-5">New York, NY</p>
           <Separator className="my-6 opacity-30" />
 
+          {/* Career progression visualization with timeline connector */}
           {/* Software Engineer II Role */}
           <div className="mb-10 relative">
+            {/* Vertical timeline connector */}
             <div className="hidden md:block absolute left-0 h-full w-0.5 bg-primary/20"></div>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
               <div className="flex items-center">
+                {/* Position marker */}
                 <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
                 <h4 className="text-md font-semibold ml-0 md:ml-2">
                   Software Engineer II
@@ -80,9 +110,11 @@ export default function ResumePage() {
 
           {/* Software Engineer I Role */}
           <div className="relative">
+            {/* Continuation of timeline connector */}
             <div className="hidden md:block absolute left-0 top-0 h-full w-0.5 bg-primary/20"></div>
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
               <div className="flex items-center">
+                {/* Position marker */}
                 <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
                 <h4 className="text-md font-semibold ml-0 md:ml-2">
                   Software Engineer I
@@ -115,7 +147,7 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Previous Experience - No Card */}
+        {/* Previous Experience - standalone experience */}
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
             <h3 className="text-lg font-bold text-foreground">
@@ -149,7 +181,7 @@ export default function ResumePage() {
         </div>
       </div>
 
-      {/* Education - No Card */}
+      {/* Education section with multi-major display */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-6">Education</h2>
 
@@ -163,9 +195,9 @@ export default function ResumePage() {
           <p className="text-muted-foreground mb-5">Chicago, Illinois</p>
           <Separator className="my-6 opacity-30" />
 
-          {/* Degree details - using columns instead of boxes */}
+          {/* Multi-major display using grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-            {/* First Major */}
+            {/* First Major with distinctive icon */}
             <div>
               <div className="flex items-center mb-4">
                 <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-accent/20 text-accent mr-3">
@@ -205,7 +237,7 @@ export default function ResumePage() {
               </div>
             </div>
 
-            {/* Second Major */}
+            {/* Second Major with distinctive icon */}
             <div>
               <div className="flex items-center mb-4">
                 <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-primary/20 text-primary mr-3">
@@ -246,20 +278,21 @@ export default function ResumePage() {
             </div>
           </div>
 
-          {/* Achievement note - no box, just styled text */}
-          {/* <div className="mt-8 pl-4 border-l-2 border-primary/30">
+          {/* Achievement callout using border instead of box */}
+          <div className="mt-8 pl-4 border-l-2 border-primary/30">
             <p className="text-foreground/90 italic">
               <span className="font-semibold not-italic">Achievement:</span>{" "}
               Graduated with double major, completing comprehensive research
               projects in both fields while maintaining Dean's List standing.
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
 
-      {/* Skills - No Card */}
+      {/* Skills section with categorized tabs */}
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-6">Skills</h2>
+        {/* Tab navigation using underlines instead of boxes */}
         <Tabs defaultValue="tech" className="w-full">
           <TabsList className="w-full mb-6 bg-transparent border-b border-border">
             <TabsTrigger
@@ -281,6 +314,7 @@ export default function ResumePage() {
               Tools
             </TabsTrigger>
           </TabsList>
+          {/* Skill badges with consistent color system */}
           <TabsContent value="tech" className="space-y-4 mt-2">
             <div className="flex flex-wrap gap-2">
               <Badge className="bg-accent/5 hover:bg-accent/10 text-accent border-0">
@@ -347,7 +381,7 @@ export default function ResumePage() {
         </Tabs>
       </div>
 
-      {/* Contact - No Card */}
+      {/* Contact section with interactive elements */}
       <div>
         <h2 className="text-xl font-semibold mb-6">Contact</h2>
         <div className="flex flex-col md:flex-row flex-wrap gap-y-5 gap-x-8">
@@ -373,29 +407,6 @@ export default function ResumePage() {
             </div>
             <span>sergey@sonkin.net</span>
           </a>
-          {/* <a
-            href="https://github.com/sergey-sonkin"
-            target="_blank"
-            className="flex items-center gap-3 group hover:text-accent transition-colors"
-          >
-            <div className="p-2 rounded-full bg-accent/10 text-accent">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                />
-              </svg>
-            </div>
-            <span>github.com/sergey-sonkin</span>
-          </a> */}
           <a
             href="https://linkedin.com/in/yourusername"
             target="_blank"
