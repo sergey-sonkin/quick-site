@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Personal Website",
+  title: "about.sonkin.net",
   description: "Personal website and portfolio",
 };
 
@@ -87,8 +87,7 @@ export default function RootLayout({
               <SocialLinks />
               <Separator className="my-4 w-1/3" />
               <div className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} My Personal Website. All rights
-                reserved.
+                © {new Date().getFullYear()} sonkin.net. All rights reserved.
               </div>
             </div>
           </footer>

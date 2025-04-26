@@ -54,9 +54,9 @@ export default function Home() {
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center order-1 md:order-2">
-            <Avatar className="w-64 h-64 border-4 border-border">
+            <Avatar className="w-64 h-64 border-4 border-border rounded-full">
               {/* Replace with your actual photo */}
-              <AvatarImage src="/profile-photo.jpg" alt="Your Name" />
+              <AvatarImage src="/img.jpg" alt="Your Name" />
               <AvatarFallback className="text-xl bg-secondary">
                 YN
               </AvatarFallback>
