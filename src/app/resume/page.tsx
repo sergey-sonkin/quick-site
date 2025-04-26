@@ -90,7 +90,7 @@ export default function ResumePage() {
               <BulletPoint>
                 Continue to own many responsibilities owned as Software Engineer
                 I, building larger in scope features and owning work usually
-                done by other pods to keep our financial institutions going live
+                done by other pods to keep new financial institutions going live
                 on schedule
               </BulletPoint>
               <BulletPoint>
@@ -146,19 +146,19 @@ export default function ResumePage() {
                 support@narmi.com that required engineering input
               </BulletPoint>
               <BulletPoint>
-                Acted as reporter and/or responder on dozens of incidents
-              </BulletPoint>
-              <BulletPoint>
                 Acted as sole engineering representative on numerous debugging
                 calls and working sessions with both technical and non-technical
                 folk at financial institutions and third parties
               </BulletPoint>
               <BulletPoint>
-                Earned Quarterly Employee Recognition Award in Q1 2024
+                Acted as reporter and/or responder on dozens of incidents
               </BulletPoint>
               <BulletPoint>
                 Built out tooling for reducing time to resolution for issues and
                 incidents
+              </BulletPoint>
+              <BulletPoint>
+                Earned Quarterly Employee Recognition Award in Q1 2024
               </BulletPoint>
               <BulletPoint>
                 Onboarded 2 new software engineers onto the team
@@ -170,25 +170,51 @@ export default function ResumePage() {
         {/* Previous Experience - standalone experience */}
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
-            <h3 className="text-lg font-bold text-foreground">
-              Data Engineer Intern
-            </h3>
+            <h3 className="text-lg font-bold text-foreground">LiquidX</h3>
             <Badge className="mt-1 md:mt-0 bg-primary/10 text-primary border-0 font-medium">
-              Jun 2017 - Dec 2019
+              Jun 2021 - Sep 2021
             </Badge>
           </div>
           <p className="text-muted-foreground mb-5">Boston, MA</p>
           <Separator className="my-6 opacity-30" />
+          {/* Wrap title in a flex container to add the marker */}
+          <div className="flex items-center mb-4">
+            {/* Position marker */}
+            <div className="hidden md:flex mr-3 h-2.5 w-2.5 rounded-full bg-primary"></div>
+            {/* Adjust title margin to align with marker */}
+            <h4 className="text-md font-semibold ml-0 md:ml-2">
+              Data Engineer Intern
+            </h4>
+          </div>
+          {/* Bullet points with original left margin */}
           <ul className="space-y-3 text-foreground/80 mt-4 ml-0 md:ml-7">
             <BulletPoint>
-              Built responsive web applications using modern JavaScript
-              frameworks
+              Primary focus: custom Deep OCR document digitization model built
+              on PyTorch and OpenCV
             </BulletPoint>
             <BulletPoint>
-              Collaborated with designers to implement UI/UX designs
+              Researched and implemented advanced algorithms for recognition and
+              extraction of unstructured data
             </BulletPoint>
             <BulletPoint>
-              Optimized application performance and accessibility
+              Optimized data pre-processing after identifying key trends in
+              customers’ documents, eliminating hours of training time
+            </BulletPoint>
+            <BulletPoint>
+              Curated extensive training, validation, and testing datasets
+              comprising thousands of internal and external documents
+            </BulletPoint>
+            <BulletPoint>
+              Implemented robust pipelines to efficiently process model output
+              and seamlessly integrate with other product offerings
+            </BulletPoint>
+            <BulletPoint>
+              Collaborated cross-functionally to integrate machine learning
+              solutions into product offerings
+            </BulletPoint>
+            <BulletPoint>
+              Regularly presented research findings, progress updates, and MVP
+              demonstrations to product team, project leads, and C-Suite
             </BulletPoint>
           </ul>
         </div>
@@ -315,7 +341,7 @@ export default function ResumePage() {
               Technical
             </TabsTrigger>
             <TabsTrigger
-              value="soft"
+              value="soft" // Added missing value prop
               className="flex-1 data-[state=active]:border-b-2 data-[state=active]:border-primary rounded-none bg-transparent data-[state=active]:text-primary"
             >
               Soft Skills
